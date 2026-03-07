@@ -8,7 +8,9 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 import model.User;
+import jakarta.servlet.annotation.WebServlet;
 
+@WebServlet(name = "AdminCustomersServlet", urlPatterns = {"/admin/customers"})
 public class AdminCustomersServlet extends HttpServlet {
 
     private final UserDAO dao = new UserDAO();
