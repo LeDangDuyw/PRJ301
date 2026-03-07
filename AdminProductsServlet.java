@@ -9,7 +9,9 @@ import java.io.IOException;
 import java.util.Date;
 import java.util.List;
 import model.Product;
+import jakarta.servlet.annotation.WebServlet;
 
+@WebServlet(name = "AdminProductsServlet", urlPatterns = {"/admin/products"})
 public class AdminProductsServlet extends HttpServlet {
 
     private final ProductDAO dao = new ProductDAO();
